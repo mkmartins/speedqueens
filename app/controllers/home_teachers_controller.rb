@@ -1,5 +1,5 @@
 class HomeTeachersController < ApplicationController
-  before_action :set_home_teacher, only: [:show, :edit, :update, :destroy]
+  before_action :set_home_teacher, only: [:show, :edit, :update, :destroy, :vote]
 
   # GET /home_teachers
   # GET /home_teachers.json
