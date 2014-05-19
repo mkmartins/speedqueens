@@ -1,0 +1,27 @@
+<h1>Listing home_teachers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @home_teachers.each do |home_teacher| %>
+      <tr>
+        <td><%= home_teacher.name %></td>
+        <td><%= link_to 'Show', home_teacher %></td>
+        <td><%= link_to 'Edit', edit_home_teacher_path(home_teacher) %></td>
+        <td><%= link_to 'Destroy', home_teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Home teacher', new_home_teacher_path %>
